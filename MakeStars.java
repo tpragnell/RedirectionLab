@@ -9,13 +9,14 @@ public class MakeStars{
     while(myObj.hasNextLine()){
         String line = myObj.nextLine();
         //System.out.println(line);
-        boolean first = true;
+        boolean space = true;
         for(int i=0; i<line.length(); i++){
           if(Character.isLetter(line.charAt(i))){
             System.out.print("*");
-            first = false;
-          } else if(!first) {
+            space = false;
+          } else if(!space) {
             System.out.print(" ");
+            space = true;
           }
         }
         System.out.println();
